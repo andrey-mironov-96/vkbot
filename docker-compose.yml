@@ -1,0 +1,15 @@
+version: '3.4'
+services:
+  
+  vkbot:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: vkbot
+    ports:
+      - "9091:80"
+    env_file:
+      - ./docker/auth_response.env
+     
+
+  
